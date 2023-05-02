@@ -1,0 +1,24 @@
+---
+ - name: service restart
+   hosts: all
+   tasks:
+     - name: sshd
+       service: name=sshd state=started
+       tags: sshd
+     - name: httpd
+       service: name=httpd state=started
+       tags: httpd
+     - name: vsftpd
+       service: name=vsftpd state=started
+       tags: vsftpd
+     - name: autofs
+       service: name=autofs state=started
+       tags: autofs
+     - name: samba
+       service: name=smb state=started
+       tags: samba
+     - name: nfs
+       service: name=nfs state=started
+       tags: nfs
+     - name: ntpd
+       service: name=ntpd state=started
