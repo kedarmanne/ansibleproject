@@ -1,0 +1,7 @@
+ --
+ - name: this is second playbook
+   hosts: all
+   tasks:
+    - name: copying file from one to one
+      copy: src=/etc/shadow dest=/tmp/
+...
