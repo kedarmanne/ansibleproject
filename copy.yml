@@ -1,4 +1,4 @@
- --
+---
  - name: this is second playbook
    hosts: all
    tasks:
