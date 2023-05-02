@@ -4,4 +4,5 @@
    tasks:
     - name: copying file from one to one
       copy: src=/etc/shadow dest=/tmp/
+        - : scr=/etc/fstab /dest=/tmp/.
 ...
