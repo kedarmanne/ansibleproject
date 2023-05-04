@@ -1,0 +1,20 @@
+---
+ - name: checking kernel version
+   hosts: all
+   tasks:
+     - name: server kernel
+       command: uname -a
+       register: kernel
+     - debug: var=kernel.stdout
+     - name: server date
+       command: date
+       register: date
+     - debug: var=date.stdout
+     - name: server up time
+       command: uptime
+       register: up
+     - debug: var=up.stdout
+     - name: server hostname
+       command: hostname
+       register: host
+     - debug: var=host.stout
