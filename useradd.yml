@@ -1,0 +1,10 @@
+---
+ - name: multiple users add
+   hosts: all
+   tasks:
+    - name: useradd
+      user: name="{{item}}" state=present create_home=yes
+      with_items:
+          - vara1
+          - vara2
+          - vara3
